@@ -1,0 +1,40 @@
+{
+    "name": "quanta/http-url-generator",
+    "type": "library",
+    "description": "Url generator library with adapter for Fast Route",
+    "keywords": [
+        "routing",
+        "url",
+        "generator",
+        "fastroute"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/quantaphp/http-url-generator",
+    "support": {
+        "issues": "https://github.com/quantaphp/http-url-generator/issues",
+        "source": "https://github.com/quantaphp/http-url-generator"
+    },
+    "authors": [
+        {
+            "name": "pmall",
+            "email": "pierre.mallinjoud@gmail.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "eloquent/phony-kahlan": "^4.0",
+        "kahlan/kahlan": "^5.0",
+        "nikic/fast-route": "^1.3",
+        "phpstan/phpstan": "^0.12.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Quanta\\Http\\": "src"
+        }
+    }
+}
