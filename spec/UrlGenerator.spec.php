@@ -76,7 +76,7 @@ describe('UrlGenerator', function () {
 
                 $test = fn () => $this->generator->generate('name');
 
-                expect($test)->toThrow(new LogicException);
+                expect($test)->toThrow(new Exception);
 
                 try {
                     $test();

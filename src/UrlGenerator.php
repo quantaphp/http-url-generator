@@ -50,6 +50,7 @@ final class UrlGenerator
      * @param array<mixed>  $query
      * @param string        $fragment
      * @return string
+     * @throws \Exception
      * @throws \LogicException
      */
     public function generate(string $name, array $placeholders = [], array $query = [], string $fragment = ''): string
@@ -67,7 +68,7 @@ final class UrlGenerator
         }
 
         catch (\Throwable $e) {
-            throw new \LogicException(sprintf('Error while parsing url pattern associated with route \'%s\' (%s)', $name, $pattern), 0, $e);
+            throw new \Exception(sprintf('Error while parsing url pattern associated with route \'%s\' (%s)', $name, $pattern), 0, $e);
         }
 
         $result = $parsed->result($placeholders);
